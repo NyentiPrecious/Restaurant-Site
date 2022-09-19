@@ -1,4 +1,8 @@
 
+a{
+  text-decoration: none;
+}
+
 header{
     position: fixed;
     width: 100%;
@@ -101,6 +105,7 @@ body {
 
 .header h1{
 	text-align: center;
+  margin-top: 10rem;
     background: -webkit-linear-gradient(#e3ca66, #b48e47);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -389,3 +394,17 @@ li i {
 		width: 100%;
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

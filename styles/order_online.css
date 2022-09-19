@@ -1,0 +1,129 @@
+body{
+    background-image:url("http://images.all-free-download.com/images/graphiclarge/nostalgic_blue_background_06_hd_pictures_169782.jpg");
+     background-size:100%;
+     background-repeat:none;
+     
+   }
+   
+   #head{
+     height:50px;
+     width:900px;
+     background-color:none;
+     top:50px;
+     text-size:px;
+     
+   }
+   #head:hover{
+     opacity:1;
+   }
+   
+    #head ul li{
+     color:white;
+     list-style:none;
+     float:left;
+      height:50px;
+      width:100px;
+      line-height:50px;
+      text-align:center;
+      font-size:20px;
+      cursor:pointer;
+     
+   }
+   #head ul li:hover{
+     background-color:black;
+   
+   }
+   
+   #option {
+     margin-top:200px;
+     float:left;
+   }
+   #option h2{
+     color:white;
+     background-color:black;
+     width:200px;
+    height:50px;
+    cursor:pointer;
+     border-radius:25px;
+     line-height:2;
+     text-align:center; 
+     transition:all 0.1s linear;
+   }
+   #option h2:hover{
+     width:250px;
+     background-color:green;
+     
+   }
+   #logo{
+     background-image:url("http://3.bp.blogspot.com/-Oz5XdPqGddQ/ULy9zwbIDXI/AAAAAAAAPio/HZwYtIr7DfE/s1600/22-restaurant-logo-design.jpg");
+     height:100px;
+     width:100px;
+     background-attachment:fixed;
+     float:right;
+     border-radius:100%;
+     margin-right:100px;
+     margin-top:-50px;
+   }
+   
+   #book{
+     background-color:white;
+     height:350px;
+     width:400px;
+     margin-top:200px;
+     padding-top:10px;
+     display:none;
+     border-radius:10px;
+     top:200px;
+     left:450px;
+     position:fixed;
+     z-index:2;
+     
+     
+   }
+   #book i{
+     float:right;
+     margin-top:-60px;
+     margin-right:10px;
+     cursor:pointer;
+   }
+   #book form #button{
+     background-color:black;
+     margin-top:30px;
+     height:50px;
+     width:400px;
+     border:none;
+     color:white;
+     font-size:15px;
+     cursor:pointer;
+     border-bottom-right-radius:10px;
+     border-bottom-left-radius:10px;
+   }
+   
+   #book form #button:hover{
+     background-color:green;
+     
+   }
+   #slider{
+     float:right;
+     margin-top:100px;
+     margin-right:20px;
+     z-index:0;
+   }
+   #slider img{
+     height:400px;
+     width:700px;
+     
+   }
+   #time{
+     width:100%;
+     color:white;
+   
+   
+   }
+   #time h3{
+     color:white;
+     margin-top:600px;
+   font-family: 'Lobster', cursive;
+   
+     
+   }

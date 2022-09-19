@@ -568,8 +568,9 @@ header .text .arrow .left:after, header .text .arrow .right:after, header .text 
 header {
     height: calc(100vh - 22px);
     background-size: cover;
+    width: 100%;
     background-repeat: no-repeat;
-    background: url("/images/3.jpg") fixed bottom;
+    background: url("/images/3333.jpg") fixed bottom;
     padding: 20px 70px;
 }
 header nav {
@@ -738,8 +739,8 @@ header .arrow-down {
 
 /*Start Recipes*/
 .recipes .image {
-    height: 350px;
-    background: url("https://res.cloudinary.com/abdel-rahman-ali/image/upload/v1535988529/three-col-1.jpg") fixed center;
+    height: 350px;      
+    background: url("/images/real.jpg") fixed center;
     background-size: cover;
 }
 /*End Recipes*/
@@ -814,7 +815,7 @@ header .arrow-down {
 
 /*Start fixed-image*/
 .fixed-image {
-    background: url("https://res.cloudinary.com/abdel-rahman-ali/image/upload/v1535988533/frontpage-menu.jpg") fixed center;
+    background: url("/images/6.jpg") fixed center;
     background-size: cover;
     height: 400px;
 }

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?" rel="stylesheet">
+
+    <link rel="stylesheet" href="/styles/order_online.css">
+    <title>online-order</title>
+</head>
+<body>
+
+          <div id="head">
+            <ul>
+              <li>Home</li>
+               <li>Location</li>
+               <li>Menu</li>
+               <li>Contact</li>
+            </ul>
+            </div>
+          <div id="logo"></div>
+          <br>
+          <br>
+          
+          <div id="option">
+            <h2 onClick="">Place an Order</h2>
+            <h2 onClick="book()">Book a table</h2>
+          </div>
+          <div id="slider"><img class="mySlides" src="http://www.ikea.com/ms/en_KW/img/ikea-food-2015/shrimp-primavera-46.jpg">
+      <img class="mySlides" src="http://www.ikea.com/ms/en_KW/img/ikea-food-2015/ikea-family-offer-32.jpg">
+      <img class="mySlides" src="http://www.ikea.com/ms/en_KW/img/ikea-food-2015/kids-nuggets-8.jpg">
+      <img class="mySlides" src="http://www.ikea.com/ms/en_JO/img/ikea_food/2017/BigFamilyOfferBB-01.jpg">
+        </div>
+          <center><div id="book">
+            <h3>Book Table </h3><i class="material-icons" onclick="oclose()">close</i>
+            <br><br>
+            <form>
+              <table>
+                <tr>
+                  <td>Full Name:-</td>
+                  <td><input type="text" name="fullname"></td>
+                </tr>
+                <tr>
+                  <td>Address:-</td>
+                  <td><input type="text" name="address"></td>
+                </tr>
+                <tr>
+                  <td>Email:-</td>
+                  <td><input type="email" name="email"></td>
+                </tr>
+                <tr>
+                  <td>Phone Number:-</td>
+                  <td><input type="text" name="pnumber"></td>
+                </tr>
+                <tr>
+                  <td>Date:-</td>
+                  <td><input type="date" name="date">               </td>
+                </tr>
+                    <tr>
+                  <td>Time:-</td>
+                  <td><input type="time" name="time"></td>
+                </tr>
+              </table>
+              <input type="submit" value="Book" name="submit" id="button">
+             
+             </form>
+            </div></center>
+          <center>
+        <div id="time">
+          <h3>
+            Timming 6:30-2:00
+            <br>
+            Tuesday-Monday
+          </h3>
+            </div></center>
+          
+
+            <script>
+                function book()
+{
+  var a=document.getElementById('book');
+  a.style.display="block";
+
+  
+}
+function oclose()
+{
+  var a=document.getElementById('book');
+  a.style.display="none";
+  
+}
+
+var slideIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none"; 
+    }
+    slideIndex++;
+    if (slideIndex > x.length) {slideIndex = 1} 
+    x[slideIndex-1].style.display = "block"; 
+    setTimeout(carousel,2000); // Change image every 2 seconds
+}
+            </script>
+      
+</body>
+</html>

@@ -396,15 +396,15 @@ a {
 	-webkit-border-radius: 50%;
 	-moz-border-radius: 50%;
 	border-radius: 50%;
-	border: 8px solid purple;
+	border: 8px solid black;
 	text-align: center;
 	display: inline-block;
 	padding: 10px;
-	color: purple;
+	color: black;
 }
 
 #service .service-round  i {
-	color: purple;
+	color: black;
 	
 }
 
@@ -415,7 +415,7 @@ a {
 }
 
 #service .round:hover .fa {
-	color: purple;
+	color: black;
 	transition: color 2s;
 	
 }

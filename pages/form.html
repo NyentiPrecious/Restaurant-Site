@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/form.css">
+
+    <link rel="stylesheet" href="/styles/index.css">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!--Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Cabin|Herr+Von+Muellerhoff|Source+Sans+Pro" rel="stylesheet">
+    <!--Fonts-->
+
+    <!--FontAwesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <!--FontAwesome-->
+
+    <link rel="stylesheet" href="/styles/index.css">
+    <title>Document</title>
+</head>
+
+
+
+<body>
+
+    <nav class="fixed-nav-bar">
+        <a class="brand">
+          EAT-INN
+          <i style="color: purple;" class="fa fa-heart" aria-hidden="true"></i>
+        </a>
+
+        <div class="navbar-container">
+            <ul>
+                <li class="nav-link ">
+                    <a class="black" href="/pages/index.html">Home
+                    </a>
+                    <div class="underline"></div>
+                </li>
+            
+                <li class="nav-link ">
+                    <a href="/pages/Gallery.html">Gallery</a>
+                    <div class="underline"></div>
+                </li>
+                <li class="nav-link">
+                    <a href="/pages/Menue.html">Menu</a>
+                    <div class="underline"></div>
+                </li>
+                <li class="nav-link active-link">
+                    <a href="/pages/form.html">Reservation</a>
+                    <div class="underline"></div>
+                </li>
+                <li class="nav-link ">
+                    <a href="/pages/Blog.html"> Blog</a>
+                    <div class="underline"></div>
+                </li>
+                <li class="nav-link">
+                    <a href="/pages/Contact.html">Contact</a>
+                    <div class="underline"></div>
+                </li>
+                    
+                <li class="nav-link">
+                    <a href="/pages/About.html">About</a>
+                    <div class="underline"></div>
+                </li>
+               
+  </ul>
+        </div>
+        
+      </nav>
+
+ 
+
+
+<!--Start fixed-image-->
+<div class="fixed-image">
+    <div class="text">
+        <h2>Make A Reservation</h2>
+        <h3>Anywhere/Anytime...</h3>
+    </div>
+</div>
+<!--End fixed-image-->
+
+
+  <!--start About Us-->
+  <div class="about-us">
+    <div class="text">
+        <h2>Our Opening</h2>
+        <h3>Hours</h3>
+        <div><i class="fas fa-asterisk"></i></div>
+        <p>EAT INN is the best place to find top-notch restaurants, bars and chill locations, our priority is to ensure you get to know the best places for you and your family to have a great experience.</p>
+      
+    </div>
+    <div class="image-container">
+        <div class="image image1">
+            <img src="/images/rest1.jpg" alt="Food Photo">
+        </div>
+        <div class="image image2">
+            <img src="/images/fst.jpg" alt="Food Photo">
+        </div>
+    </div>
+</div>
+<!--End About Us-->
+
+
+<!--Start fixed-image-->
+<div class="fixed-image">
+    <div class="text">
+        <h2>Book Us For</h2>
+        <h3>Your Events</h3>
+
+        
+  
+    <div id="timeDiv"></div>
+    <label class="viewOpen" for="modal-state">View Hours&nbsp;&nbsp;<i class="fa fa-clock-o"></i></label>
+    <input type="checkbox" name="modal-state" id="modal-state">
+    <div class="modal-overlay">
+      <label for="modal-state" class="modal-overlay-close"></label>
+      <div class="modal">
+        <label class="button-close" for="modal-state"><i class="fa fa-times"></i></label>
+        <h2>We're Open At These Times</h2>
+        <div id="Wednesday" class="dateTime">
+          <div class="day">Wednesday</div>
+          <div class="time">4pm - 12am</div>
+        </div>
+        <br>
+        <div id="Thursday" class="dateTime">
+          <div class="day">Thursday</div>
+          <div class="time">4pm - 12am</div>
+        </div>
+        <br>
+        <div id="Friday" class="dateTime">
+          <div class="day">Friday</div>
+          <div class="time">4pm - 12am</div>
+        </div>
+        <br>
+        <div id="Saturday" class="dateTime">
+          <div class="day">Saturday</div>
+          <div class="time">1pm - 12am</div>
+        </div>
+        <br>
+        <div id="Sunday" class="dateTime">
+          <div class="day">Sunday</div>
+          <div class="time">1pm - 12am</div>
+        </div>
+        <br>
+        <div id="Monday" class="dateTime">
+          <div class="day">Monday</div>
+          <div class="time">Closed</div>
+        </div>
+        <br>
+        <div id="Tuesday" class="dateTime">
+          <div class="day">Tuesday</div>
+          <div class="time">Closed</div>
+        </div>
+      </div>
+    </div>
+
+
+    </div>
+</div>
+<!--End fixed-image-->
+
+
+
+
+
+<div class="formbold-main-wrapper">
+    <!-- Author: FormBold Team -->
+    <!-- Learn More: https://formbold.com -->
+    <div class="formbold-form-wrapper">
+      <form action="https://formbold.com/s/FORM_ID" method="POST">
+        <div class="flex flex-wrap formbold--mx-3">
+          <div class="w-full sm:w-half formbold-px-3">
+            <div class="formbold-mb-5">
+              <label for="fName" class="formbold-form-label"> First Name </label>
+              <input type="text" name="fName" id="fName" placeholder="First Name" class="formbold-form-input" />
+            </div>
+          </div>
+          <div class="w-full sm:w-half formbold-px-3">
+            <div class="formbold-mb-5">
+              <label for="lName" class="formbold-form-label"> Last Name </label>
+              <input type="text" name="lName" id="lName" placeholder="Last Name" class="formbold-form-input" />
+            </div>
+          </div>
+        </div>
+  
+        <div class="formbold-mb-5">
+          <label for="guest" class="formbold-form-label">
+            How many guest are you bringing?
+          </label>
+          <input type="number" name="guest" id="guest" placeholder="5" class="formbold-form-input" />
+        </div>
+        <div class="elem-group">
+            <label for="email" class="formbold-form-label" >Your E-mail</label>
+            <input type="email" id="email" name="visitor_email" placeholder="john.doe@email.com" required>
+          </div>
+          <div class="elem-group">
+            <label for="phone" class="formbold-form-label" >Your Phone</label>
+            <input type="tel" id="phone" name="visitor_phone" placeholder="498-348-3872" pattern=(\d{3})-?\s?(\d{3})-?\s?(\d{4}) required>
+          </div>
+  
+        <div class="flex flex-wrap formbold--mx-3">
+          <div class="w-full sm:w-half formbold-px-3">
+            <div class="formbold-mb-5 w-full">
+              <label for="date" class="formbold-form-label"> Date </label>
+              <input type="date" name="date" id="date" class="formbold-form-input" />
+            </div>
+          </div>
+          <div class="w-full sm:w-half formbold-px-3">
+            <div class="formbold-mb-5">
+              <label for="time" class="formbold-form-label"> Time </label>
+              <input type="time" name="time" id="time" class="formbold-form-input" />
+            </div>
+          </div>
+        </div>
+
+        <div class="elem-group">
+            <label for="message">Anything Else?</label>
+            <textarea id="message" name="visitor_message" placeholder="Tell us anything else that might be important." required></textarea>
+          </div>
+  
+        <div class="flex formbold-mb-5">
+          <div class="flex">
+            <input type="radio" name="radio1" id="radioButton1" class="formbold-radio" />
+            <label for="radioButton1" class="formbold-radio-label"> Yes </label>
+          </div>
+          <div class="flex">
+            <input type="radio" name="radio1" id="radioButton2" class="formbold-radio" />
+            <label for="radioButton2" class="formbold-radio-label"> No </label>
+          </div>
+        </div>
+  
+        <div>
+          <button class="formbold-btn">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!--Start fixed-image-->
+<div class="fixed-image">
+    <div class="text">
+        <h2>Make A Reservation</h2>
+        <h3>Anywhere/Anytime...</h3>
+    </div>
+</div>
+<!--End fixed-image--> 
+
+
+
+  <div class="container">
+    <section class="section1">
+      <div class="sec1title">
+        <h1>Get in touch</h1>
+      </div>  
+    </section>
+    <section class="section2"> 
+      <div class="contactform">
+      <h5>Drop us a line...</h5>
+        <form action="#">
+          <label for="firstname">
+            <i class="cntfrmicn fa fa-user"></i>
+            <input name="firstname" class="form-fields" type="text">
+          </label>
+          <label for="email">
+            <i class="cntfrmicn fa fa-envelope"></i>
+            <input name="email" class="form-fields" type="text">
+          </label>
+          <label for="contact">
+            <i class="cntfrmicn fa fa-phone"></i>
+            <input name="contact" class="form-fields" type="text">
+          </label>
+          <label for="textarea">
+            <i class="cntfrmicn fa fa-comment"></i>
+            <textarea class="form-fields" name="textarea" id="" cols="30" rows="10"></textarea>
+          </label>
+          <button class="form-fields button" value="Send" type="submit">Send <i class="fa fa-paper-plane"></i></button>
+        </form>
+      </div>
+      <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script><div class="contmap" style='overflow:hidden;height:550px;width:100%;'><div id='gmap_canvas' style='height:100%;width:100%;'></div><div><small><a href="http://embedgooglemaps.com">                  embed google maps             </a></small></div><div><small><a href="http://freedirectorysubmissionsites.com/">free web directories</a></small></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div><script type='text/javascript'>function init_map(){var myOptions = {zoom:14,center:new google.maps.LatLng(19.075314480255834,72.88153973865361),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(19.075314480255834,72.88153973865361)});infowindow = new google.maps.InfoWindow({content:'<strong>My Location</strong><br>mumbai<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
+    </section>
+  </div>
+
+
+   <!--Start Footer-->
+   <footer>
+    <div class="text">
+        <h2>ABOUT EAT-INN</h2>
+        <div><i class="fas fa-asterisk"></i></div>
+        <p>EAT-INN is an enchanting and easy-to-use parallax Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto possimus repudiandae vitae rerum ea consectetur labore magnam atque, magni recusandae harum incidunt, culpa nisi sequi blanditiis expedita placeat quidem. Veniam!.</p>
+    </div>
+    <div class="contact-container">
+      <div class="social-media">
+          <h3>Follow Us</h3>
+          <div class="links">
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-facebook-square"></i></a>
+              <a href="#"><i class="fab fa-pinterest"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+      </div>
+        <div class="newsletter">
+          <h3>NewsLetter</h3>
+            <form method="post">
+                <input type="email" name="email" placeholder="Type Your Email">
+                <i class="fas fa-envelope"></i>
+            </form>
+        </div>
+    </div>
+</footer>
+<!--End Footer-->
+
+<!--Start Copy-Right-->
+<div class="copyright">
+    <svg class="svg-up" width="192" height="61" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 160.7 61.5" enable-background="new 0 0 160.7 61.5" xml:space="preserve"><path fill="#262526" d="M80.3,61.5c0,0,22.1-2.7,43.1-5.4s41-5.4,36.6-5.4c-21.7,0-34.1-12.7-44.9-25.4S95.3,0,80.3,0c-15,0-24.1,12.7-34.9,25.4S22.3,50.8,0.6,50.8c-4.3,0-6.5,0,3.5,1.3S36.2,56.1,80.3,61.5z"></path></svg>
+    <i class="fas fa-angle-double-up arrow-up"></i>
+    <ul class="info">
+        <li>&copy; EAT-IN 2000</li>
+        <li>Cameroon, Buea</li>
+        <li>Tel: +237 xxx xxx xxx</li>
+        <li>Service with love by <a href="#">EAT-INN</a> Team</li>
+    </ul>
+    <ul class="CTA">
+        <li><a href="#">PERMISSIONS AND COPYRIGHT</a></li>
+        <li><a href="#">CONTACT THE TEAM</a></li>
+    </ul>
+</div>
+<!--End Copy-Right-->
+
+
+<script>
+    var now = new Date();
+var weekday = new Array(7);
+weekday[0] = "Sunday";
+weekday[1] = "Monday";
+weekday[2] = "Tuesday";
+weekday[3] = "Wednesday";
+weekday[4] = "Thursday";
+weekday[5] = "Friday";
+weekday[6] = "Saturday";
+
+var checkTime = function() {
+  var today = weekday[now.getDay()];
+  var timeDiv = document.getElementById('timeDiv');
+  var dayOfWeek = now.getDay();
+  var hour = now.getHours();
+  var minutes = now.getMinutes();
+
+  //add AM or PM
+  var suffix = hour >= 12 ? "PM" : "AM";
+
+  // add 0 to one digit minutes
+  if (minutes < 10) {
+    minutes = "0" + minutes
+  };
+
+  if ((dayOfWeek == 0 || dayOfWeek == 6) && hour >= 13 && hour <= 23) {
+    hour = ((hour + 11) % 12 + 1); //i.e. show 1:15 instead of 13:15
+    timeDiv.innerHTML = 'it\'s ' + today + ' ' + hour + ':' + minutes + suffix + ' - we\'re open!';
+    timeDiv.className = 'open';
+  } 
+  
+  else if ((dayOfWeek == 3 || dayOfWeek == 4 || dayOfWeek == 5) && hour >= 16 && hour <= 23) {
+    hour = ((hour + 11) % 12 + 1);
+    timeDiv.innerHTML = 'it\'s ' + today + ' ' + hour + ':' + minutes + suffix + ' - we\'re open!';
+    timeDiv.className = 'open';
+  } 
+  
+  else {
+    if (hour == 0 || hour > 12) {
+      hour = ((hour + 11) % 12 + 1); //i.e. show 1:15 instead of 13:15
+    }
+    timeDiv.innerHTML = 'It\'s ' + today + ' ' + hour + ':' + minutes + suffix + ' - we\'re closed!';
+    timeDiv.className = 'closed';
+  }
+};
+
+var currentDay = weekday[now.getDay()];
+var currentDayID = "#" + currentDay; //gets todays weekday and turns it into id
+$(currentDayID).toggleClass("today"); //hightlights today in the view hours modal popup
+
+setInterval(checkTime, 1000);
+checkTime();
+</script>
+
+
+
+</body>
+</html>

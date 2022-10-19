@@ -4,16 +4,79 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Menu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- <link rel="stylesheet" href="/styles/index.css"> -->
     <link rel="stylesheet" href="/styles/Menue.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.1/css/all.css">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Rubik:wght@300;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
+  <nav class="fixed-nav-bar">
+    <a class="brand">
+      EAT-INN
+      <i style="color: purple;" class="fa fa-heart" aria-hidden="true"></i>
+    </a>
+
+    <div class="navbar-container">
+        <ul>
+            <li class="nav-link ">
+                <a class="black" href="/pages/index.html">Home
+                </a>
+                <div class="underline"></div>
+            </li>
+       
+            <li class="nav-link ">
+                <a href="/pages/Gallery.html">Gallery</a>
+                <div class="underline"></div>
+            </li>
+            <li class="nav-link active-link">
+                <a href="/pages/Menue.html">Menu</a>
+                <div class="underline"></div>
+            </li>
+            <li class="nav-link">
+                <a href="/pages/form.html">Reservation</a>
+                <div class="underline"></div>
+            </li>
+            <li class="nav-link">
+                <a href="/pages/Blog.html">Blog</a>
+                <div class="underline"></div>
+            </li>
+            <li class="nav-link">
+              <a href="/pages/form.html">Contact</a>
+              <div class="underline"></div>
+          </li>
+              
+          <li class="nav-link">
+              <a href="/pages/About.html">About</a>
+              <div class="underline"></div>
+          </li>
+           
+        </ul>
+    </div>
+
+    <div class="hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+
+
+    
+  </nav>
+
+  
+
+
     
     <div class="container">
         <div class="header">
-          <div class="title">Menu</div>
+          <div style="margin: 2rem; " class="title">Our Menu</div>
         </div>
         <div class="indicators">
           <div id="i1">
@@ -70,6 +133,26 @@
           </div>
         </div>
       </div>
+
+
+
+      <script>
+        const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
+
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("active");
+  navMenu.classList.toggle("active");
+});
+
+document.querySelectorAll(".nav-link").forEach((link) =>
+  link.addEventListener("click", () => {
+    hamburger.classList.remove("active");
+    navMenu.classList.remove("active");
+  })
+);
+      </script>
+
 
       <script>
         const starters = JSON.parse(

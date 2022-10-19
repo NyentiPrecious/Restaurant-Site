@@ -9,6 +9,11 @@
 
    
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!--Fonts-->
     <link href="https://fonts.googleapis.com/css?family=Cabin|Herr+Von+Muellerhoff|Source+Sans+Pro" rel="stylesheet">
     <!--Fonts-->
@@ -49,7 +54,9 @@
           <div class="logo">
               
             <a href="index.html">
-            <h1>EAT-INN</h1></a>
+            <h1 style="color: purple;" >EAT-INN <i style="color: purple;" class="fa fa-heart" aria-hidden="true"></i> </h1>
+            
+          </a>
           </div>
           <div class="toggle">
               <span class="first"></span>
@@ -58,28 +65,29 @@
           </div>
           <div class="navigation-bar">
               <ul>
-                  <li class="active"><a href="index.html">Home<span class="underline"></span></a></li>
-                  <li><a href="#">Reservations<span class="underline"></span></a></li>
-                  <li><a href="#">Menu<span class="underline"></span></a></li>
-                  <li><a href="#">Blog<span class="underline"></span></a></li>
-                  <li><a href="#">Features<span class="underline"></span></a></li>
-                  <li><a href="#">Shop<span class="underline"></span></a></li>
-                  <li><a href="#">Contact<span class="underline"></span></a></li>
+                  <li  class="active"><a style="font-size: 22px;" href="/pages/index.html">Home<span class="underline"></span></a></li>
+                  <li><a style="font-size: 22px;" href="/pages/Gallery.html">Gallery<span class="underline"></span></a></li>
+                  <li><a style="font-size: 22px;" href="/pages/Menue.html">Menu<span class="underline"></span></a></li>
+                  <li><a style="font-size: 22px;" href="/pages/form.html">Reservation<span class="underline"></span></a></li>
+                  <li><a style="font-size: 22px;" href="/pages/Blog.html">Blog<span class="underline"></span></a></li>
+                  <li><a style="font-size: 22px;" href="/pages/Contact.html">Contact<span class="underline"></span></a></li>
+                  <li><a style="font-size: 22px;" href="/pages/About.html">About<span class="underline"></span></a></li>       
+                  
               </ul>
           </div>
       </nav>
       <div class="text">
-          <h2>Welcome</h2>
-          <h1 style="color: black;" >EAT INN</h1>
+          <h2  >Welcome</h2>
+          <span style="color: black;" >We offer the best</span>
           <div class="arrow">
               <span class="left"></span>
               <i class="fas fa-asterisk"></i>
               <span class="right"></span>
           </div>
-          <span style="color: black;" >We offer the best</span>
-          <div class="button"><button>
+          
+          <!-- <div class="button"><button>
             <a href="/pages/Restaurants.html" >visit our restaurants</a>
-            </button></div>
+            </button></div> -->
       </div>
       <svg class="svg-down" width="192" height="61" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 160.7 61.5" enable-background="new 0 0 160.7 61.5" xml:space="preserve"><path fill="currentColor" d="M80.3,61.5c0,0,22.1-2.7,43.1-5.4s41-5.4,36.6-5.4c-21.7,0-34.1-12.7-44.9-25.4S95.3,0,80.3,0c-15,0-24.1,12.7-34.9,25.4S22.3,50.8,0.6,50.8c-4.3,0-6.5,0,3.5,1.3S36.2,56.1,80.3,61.5z"></path></svg>
       <div class="arrow-down">
@@ -106,6 +114,85 @@
       </div>
   </div>
   <!--End About Us-->
+
+
+    <!--Start fixed-image-->
+    <div class="fixed-image">
+        <div class="text">
+            <h2>The Perfect</h2>
+            <h3>Blend</h3>
+        </div>
+    </div>
+    <!--End fixed-image-->
+  
+    <!--start reservation-->
+    <div class="reservation">
+        <div class="text">
+            <h2>Culinary</h2>
+            <h3>Delight</h3>
+            <div><i class="fas fa-asterisk"></i></div>
+            <p>We promise an intimate and relaxed dining experience that offers something different to local and foreign patrons and ensures you enjoy a memorable food experience every time.</p>
+           
+         
+            <label style="background-color: purple; color: white; "  class="viewOpen" for="modal-state">View Hours&nbsp;&nbsp;<i class="fa fa-clock-o"></i></label>
+            <input type="checkbox" name="modal-state" id="modal-state">
+            <div class="modal-overlay">
+              <label for="modal-state" class="modal-overlay-close"></label>
+              <div class="modal">
+                <label class="button-close" for="modal-state"><i class="fa fa-times"></i></label>
+                <h2>We're Open At These Times</h2>
+                <div id="Wednesday" class="dateTime">
+                  <div class="day">Wednesday</div>
+                  <div class="time">4pm - 12am</div>
+                </div>
+                <br>
+                <div id="Thursday" class="dateTime">
+                  <div class="day">Thursday</div>
+                  <div class="time">4pm - 12am</div>
+                </div>
+                <br>
+                <div id="Friday" class="dateTime">
+                  <div class="day">Friday</div>
+                  <div class="time">4pm - 12am</div>
+                </div>
+                <br>
+                <div id="Saturday" class="dateTime">
+                  <div class="day">Saturday</div>
+                  <div class="time">1pm - 12am</div>
+                </div>
+                <br>
+                <div id="Sunday" class="dateTime">
+                  <div class="day">Sunday</div>
+                  <div class="time">1pm - 12am</div>
+                </div>
+                <br>
+                <div id="Monday" class="dateTime">
+                  <div class="day">Monday</div>
+                  <div class="time">Closed</div>
+                </div>
+                <br>
+                <div id="Tuesday" class="dateTime">
+                  <div class="day">Tuesday</div>
+                  <div class="time">Closed</div>
+                </div>
+              </div>
+            </div>
+
+           
+        </div>
+        
+        <div class="image-container">
+            <div class="image image1">
+                <img src="https://res.cloudinary.com/abdel-rahman-ali/image/upload/v1535988518/bacon-1.jpg" alt="Food Photo">
+            </div>
+            <div class="image image2">
+                <img src="https://res.cloudinary.com/abdel-rahman-ali/image/upload/v1535988518/bacon-2.jpg" alt="Food Photo">
+            </div>
+        </div>
+    </div>
+    <!--End reservation-->
+
+
 
   <!--start Recipes-->
   <div class="recipes">
@@ -155,6 +242,13 @@
   </div>
   <!--End Menu-->
 
+
+
+
+
+
+
+
   <!--Start fixed-image-->
   <div class="fixed-image">
       <div class="text">
@@ -164,7 +258,7 @@
   </div>
   <!--End fixed-image-->
 
-  <!--start About Us-->
+  <!--start reservation-->
   <div class="reservation">
       <div class="text">
           <h2>Culinary</h2>
@@ -182,7 +276,212 @@
           </div>
       </div>
   </div>
-  <!--End About Us-->
+  <!--End reservation-->
+
+ 
+
+
+  <!-- <div class="container py-5">
+    <div class="row my-5">
+      <div class="col-12">
+        <div class="text">
+            <h2>Our Partners</h2>
+
+        </div>
+        <div class="force-full-width">
+            
+          <div class="marquee-box">
+            <div class="marquee">
+              <figure>
+                <img src="https://knorish.com/assetsnew/images/client-logos/beamusician-logo-01.jpg" alt="featured creator">
+                <figcaption>Beamusician</figcaption>
+              </figure>
+              <figure>
+                <img src="https://knorish.com/assetsnew/images/client-logos/bingeclass-logo-01.jpg" alt="featured creator">
+                <figcaption>Binge Marketing by Gopal Krishnan</figcaption>
+              </figure>
+              <figure>
+                <img src="https://knorish.com/assetsnew/images/client-logos/champexcel-logo-01.jpg" alt="featured creator">
+                <figcaption>Champ Excel</figcaption>
+              </figure>
+              <figure>
+                <img src="https://knorish.com/assetsnew/images/client-logos/diptivartakacademy-logo-01.jpg" alt="featured creator">
+                <figcaption>Dipti Vartak</figcaption>
+              </figure>
+              <figure>
+                <img src="https://knorish.com/assetsnew/images/client-logos/edifypath-logo-01.jpg" alt="featured creator">
+                <figcaption>Edifypath</figcaption>
+              </figure>
+              <figure>
+                <img src="https://knorish.com/assetsnew/images/client-logos/fundenable-logo-01.jpg" alt="featured creator">
+                <figcaption>Fundenable</figcaption>
+              </figure>
+              <figure>
+                <img src="https://knorish.com/assetsnew/images/client-logos/gurukul-100x-logo-01.jpg" alt="featured creator">
+                <figcaption>Gurukul by 100X VC</figcaption>
+              </figure>
+              <figure>
+                <img src="https://knorish.com/assetsnew/images/client-logos/iesd-logo-01.jpg" alt="featured creator">
+                <figcaption>Indian Energy Skill Development by UPES</figcaption>
+              </figure>
+              <figure>
+                <img src="https://knorish.com/assetsnew/images/client-logos/meghnaddesaiacademy-logo-01.jpg" alt="featured creator">
+                <figcaption>Meghnad Desai Academy Of Economics</figcaption>
+              </figure>
+              <figure>
+                <img src="https://knorish.com/assetsnew/images/client-logos/mintsrecipes-logo-01.jpg" alt="featured creator">
+                <figcaption>Mints Recipes</figcaption>
+              </figure>
+              <figure>
+                <img src="https://knorish.com/assetsnew/images/client-logos/purple-coach-logo-01.jpg" alt="featured creator">
+                <figcaption>Purple Coach</figcaption>
+              </figure>
+              <figure>
+                <img src="https://knorish.com/assetsnew/images/client-logos/sanjeevkapooracademy-logo-01.jpg" alt="featured creator">
+                <figcaption>Sanjeev kapoor Academy</figcaption>
+              </figure>
+              <figure>
+                <img src="https://knorish.com/assetsnew/images/client-logos/sbyacademy-logo-01.jpg" alt="featured creator">
+                <figcaption>SBY Academy</figcaption>
+              </figure>
+              <figure>
+                <img src="https://knorish.com/assetsnew/images/client-logos/shikshamaitri-logo-01.jpg" alt="featured creator">
+                <figcaption>Shikshamaitri</figcaption>
+              </figure>
+              <figure>
+                <img src="https://knorish.com/assetsnew/images/client-logos/sonalhollandwineacademy-logo-01.jpg" alt="featured creator">
+                <figcaption>Sonal holland Wine Academy</figcaption>
+              </figure>
+              <figure>
+                <img src="https://knorish.com/assetsnew/images/client-logos/srimantha-logo-01.jpg" alt="featured creator">
+                <figcaption>Srimantha</figcaption>
+              </figure>
+              <figure>
+                <img src="https://knorish.com/assetsnew/images/client-logos/symbiosistbi-logo-01.jpg" alt="featured creator">
+                <figcaption>Symboisis Centre For Entrepreneurship & Innovation</figcaption>
+              </figure>
+              <figure>
+                <img src="https://knorish.com/assetsnew/images/client-logos/tutionfe-logo-01.jpg" alt="featured creator">
+                <figcaption>Tuition Fe by BSE</figcaption>
+              </figure>
+            </div>
+            <div class="marquee">
+              <figure>
+                <img src="https://knorish.com/assetsnew/images/client-logos/beamusician-logo-01.jpg" alt="featured creator">
+                <figcaption>Beamusician</figcaption>
+              </figure>
+              <figure>
+                <img src="https://knorish.com/assetsnew/images/client-logos/bingeclass-logo-01.jpg" alt="featured creator">
+                <figcaption>Binge Marketing by Gopal Krishnan</figcaption>
+              </figure>
+              <figure>
+                <img src="https://knorish.com/assetsnew/images/client-logos/champexcel-logo-01.jpg" alt="featured creator">
+                <figcaption>Champ Excel</figcaption>
+              </figure>
+              <figure>
+                <img src="https://knorish.com/assetsnew/images/client-logos/diptivartakacademy-logo-01.jpg" alt="featured creator">
+                <figcaption>Dipti Vartak</figcaption>
+              </figure>
+              <figure>
+                <img src="https://knorish.com/assetsnew/images/client-logos/edifypath-logo-01.jpg" alt="featured creator">
+                <figcaption>Edifypath</figcaption>
+              </figure>
+              <figure>
+                <img src="https://knorish.com/assetsnew/images/client-logos/fundenable-logo-01.jpg" alt="featured creator">
+                <figcaption>Fundenable</figcaption>
+              </figure>
+              <figure>
+                <img src="https://knorish.com/assetsnew/images/client-logos/gurukul-100x-logo-01.jpg" alt="featured creator">
+                <figcaption>Gurukul by 100X VC</figcaption>
+              </figure>
+              <figure>
+                <img src="https://knorish.com/assetsnew/images/client-logos/iesd-logo-01.jpg" alt="featured creator">
+                <figcaption>Indian Energy Skill Development by UPES</figcaption>
+              </figure>
+              <figure>
+                <img src="https://knorish.com/assetsnew/images/client-logos/meghnaddesaiacademy-logo-01.jpg" alt="featured creator">
+                <figcaption>Meghnad Desai Academy Of Economics</figcaption>
+              </figure>
+              <figure>
+                <img src="https://knorish.com/assetsnew/images/client-logos/mintsrecipes-logo-01.jpg" alt="featured creator">
+                <figcaption>Mints Recipes</figcaption>
+              </figure>
+              <figure>
+                <img src="https://knorish.com/assetsnew/images/client-logos/purple-coach-logo-01.jpg" alt="featured creator">
+                <figcaption>Purple Coach</figcaption>
+              </figure>
+              <figure>
+                <img src="https://knorish.com/assetsnew/images/client-logos/sanjeevkapooracademy-logo-01.jpg" alt="featured creator">
+                <figcaption>Sanjeev kapoor Academy</figcaption>
+              </figure>
+              <figure>
+                <img src="https://knorish.com/assetsnew/images/client-logos/sbyacademy-logo-01.jpg" alt="featured creator">
+                <figcaption>SBY Academy</figcaption>
+              </figure>
+              <figure>
+                <img src="https://knorish.com/assetsnew/images/client-logos/shikshamaitri-logo-01.jpg" alt="featured creator">
+                <figcaption>Shikshamaitri</figcaption>
+              </figure>
+              <figure>
+                <img src="https://knorish.com/assetsnew/images/client-logos/sonalhollandwineacademy-logo-01.jpg" alt="featured creator">
+                <figcaption>Sonal holland Wine Academy</figcaption>
+              </figure>
+              <figure>
+                <img src="https://knorish.com/assetsnew/images/client-logos/srimantha-logo-01.jpg" alt="featured creator">
+                <figcaption>Srimantha</figcaption>
+              </figure>
+              <figure>
+                <img src="https://knorish.com/assetsnew/images/client-logos/symbiosistbi-logo-01.jpg" alt="featured creator">
+                <figcaption>Symboisis Centre For Entrepreneurship & Innovation</figcaption>
+              </figure>
+              <figure>
+                <img src="https://knorish.com/assetsnew/images/client-logos/tutionfe-logo-01.jpg" alt="featured creator">
+                <figcaption>Tuition Fe by BSE</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+  
+
+   <!-- start map  -->
+
+   <div class="container">
+    <section class="section1">
+      <div class="sec1title">
+        <h1>Get in touch</h1>
+      </div>  
+    </section>
+    <section class="section2"> 
+      <div class="contactform">
+      <h5>Drop us a line...</h5>
+        <form action="#">
+          <label for="firstname">
+            <i class="cntfrmicn fa fa-user"></i>
+            <input name="firstname" class="form-fields" type="text">
+          </label>
+          <label for="email">
+            <i class="cntfrmicn fa fa-envelope"></i>
+            <input name="email" class="form-fields" type="text">
+          </label>
+          <label for="contact">
+            <i class="cntfrmicn fa fa-phone"></i>
+            <input name="contact" class="form-fields" type="text">
+          </label>
+          <label for="textarea">
+            <i class="cntfrmicn fa fa-comment"></i>
+            <textarea class="form-fields" name="textarea" id="" cols="30" rows="10"></textarea>
+          </label>
+          <button class="form-fields button" value="Send" type="submit">Send <i class="fa fa-paper-plane"></i></button>
+        </form>
+      </div>
+      <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script><div class="contmap" style='overflow:hidden;height:550px;width:100%;'><div id='gmap_canvas' style='height:100%;width:100%;'></div><div><small><a href="http://embedgooglemaps.com">                  embed google maps             </a></small></div><div><small><a href="http://freedirectorysubmissionsites.com/">free web directories</a></small></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div><script type='text/javascript'>function init_map(){var myOptions = {zoom:14,center:new google.maps.LatLng(19.075314480255834,72.88153973865361),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(19.075314480255834,72.88153973865361)});infowindow = new google.maps.InfoWindow({content:'<strong>My Location</strong><br>mumbai<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
+    </section>
+  </div>
+    <!-- end map -->
+
 
   <!--Start Footer-->
   <footer>
@@ -235,6 +534,60 @@
 
 
 
+  <script>
+    var now = new Date();
+var weekday = new Array(7);
+weekday[0] = "Sunday";
+weekday[1] = "Monday";
+weekday[2] = "Tuesday";
+weekday[3] = "Wednesday";
+weekday[4] = "Thursday";
+weekday[5] = "Friday";
+weekday[6] = "Saturday";
+
+var checkTime = function() {
+  var today = weekday[now.getDay()];
+  var timeDiv = document.getElementById('timeDiv');
+  var dayOfWeek = now.getDay();
+  var hour = now.getHours();
+  var minutes = now.getMinutes();
+
+  //add AM or PM
+  var suffix = hour >= 12 ? "PM" : "AM";
+
+  // add 0 to one digit minutes
+  if (minutes < 10) {
+    minutes = "0" + minutes
+  };
+
+  if ((dayOfWeek == 0 || dayOfWeek == 6) && hour >= 13 && hour <= 23) {
+    hour = ((hour + 11) % 12 + 1); //i.e. show 1:15 instead of 13:15
+    timeDiv.innerHTML = 'it\'s ' + today + ' ' + hour + ':' + minutes + suffix + ' - we\'re open!';
+    timeDiv.className = 'open';
+  } 
+  
+  else if ((dayOfWeek == 3 || dayOfWeek == 4 || dayOfWeek == 5) && hour >= 16 && hour <= 23) {
+    hour = ((hour + 11) % 12 + 1);
+    timeDiv.innerHTML = 'it\'s ' + today + ' ' + hour + ':' + minutes + suffix + ' - we\'re open!';
+    timeDiv.className = 'open';
+  } 
+  
+  else {
+    if (hour == 0 || hour > 12) {
+      hour = ((hour + 11) % 12 + 1); //i.e. show 1:15 instead of 13:15
+    }
+    timeDiv.innerHTML = 'It\'s ' + today + ' ' + hour + ':' + minutes + suffix + ' - we\'re closed!';
+    timeDiv.className = 'closed';
+  }
+};
+
+var currentDay = weekday[now.getDay()];
+var currentDayID = "#" + currentDay; //gets todays weekday and turns it into id
+$(currentDayID).toggleClass("today"); //hightlights today in the view hours modal popup
+
+setInterval(checkTime, 1000);
+checkTime();
+  </script>
 
 <script>
     // constants
@@ -473,7 +826,6 @@ if (pageTitle.text === "ROSA- Restaurant") {
     boxModelArrow.addEventListener("click", boxModelFun);
 }
  </script>
-
 
 
 

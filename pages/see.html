@@ -1,189 +1,658 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>ROSA- Restaurant</title>
-    <meta name="description" content="ROSA is an enchanting Parallax Restaurant WordPress Theme that allows you to tell your story in an enjoyable way, perfect for restaurants or coffee shops.">
-    <meta name="viewport" content="width = device-width, initial-scale = 1, shrink-to-fit = no">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
 
-    <!-- Place favicon.ico in the root directory -->
-    <link rel="shortcut icon" href="https://res.cloudinary.com/abdel-rahman-ali/image/upload/v1535988515/rosa-favicon.png">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!--Fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Cabin|Herr+Von+Muellerhoff|Source+Sans+Pro" rel="stylesheet">
+  <!--Fonts-->
 
-    <!--Fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Cabin|Herr+Von+Muellerhoff|Source+Sans+Pro" rel="stylesheet">
-    <!--Fonts-->
+  <!--FontAwesome-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+  <!--FontAwesome-->
 
-    <!--FontAwesome-->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
-    <!--FontAwesome-->
-
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/main.min.css">
+ 
 </head>
-<style>
-    
-* {
-  margin:0px;
-  padding:0px;
-}
-*, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing:border-box; -o-box-sizing:border-box; box-sizing: border-box; }
 
-.clearfix:before, .clearfix:after { display: table; content: ''; }
-.clearfix:after { clear: both; }
+<style>
+  /*Start Header*/
+
+  @media (max-width: 576px) {
+    h3, h1 {
+        font-size: 20px;
+    }
+    h2 {
+        font-size:90px
+    }
+    header {
+        padding: 0;
+    }
+    header nav .logo {
+        padding-left: 0;
+    }
+    header nav .toggle.active {
+        left: 36%;
+    }
+    header .navigation-bar.show {
+        padding: 20px;
+        width: 48%;
+    }
+    .about-us, .reservation {
+        padding: 60px 20px;
+    }
+    .menu {
+        padding: 60px 0 60px 20px;
+    }
+}
+
+/*Start Home Page Responsive*/
+
+@media (max-width: 1200px) {
+    .menu, .about-us, .reservation {
+        padding: 60px 40px;
+    }
+    .about-us .text, .reservation .text {
+        padding: 0 32px 0 0;
+    }
+    .about-us .image-container, .reservation .image-container {
+        align-items: center;
+    }
+    .menu .text {
+        padding: 0 0 0 32px;
+    }
+}
+
+@media (max-width: 992px) {
+    body {
+        padding: 0;
+    }
+    .dots {
+        display: none;
+    }
+    header {
+        height: calc(100vh - 119px);
+    }
+    header nav .logo {
+        padding-left: 0;
+    }
+    .about-us {
+        display: block;
+        padding-top: 50px;
+    }
+    .about-us .text , .reservation .text {
+        padding: 0 0 40px;
+    }
+    .about-us .image-container .image1, .reservation .image-container .image1 {
+        margin-left: 0;
+    }
+    .menu {
+        display: block;
+        padding: 60px 20px 60px 40px;
+    }
+    .menu .text {
+        padding: 20px 20px 0 0;
+    }
+    .reservation {
+        display: block;
+        padding: 30px 20px 60px;
+    }
+    .contact {
+        display: block;
+        padding: 78px 20px;
+    }
+    .contact .form {
+        margin-left: 0;
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    header nav {
+        display: block;
+        text-align: center;
+        left: 0;
+        top: 0;
+        width: 100%;
+        padding-top: 25px;
+    }
+    header nav .toggle {
+        display: block;
+    }
+    header .navigation-bar {
+        position: fixed;
+        top: 0;
+        left: -174px;
+        height: 100%;
+        background-color: #262526;
+        overflow: hidden;
+        z-index: 20;
+        padding: 40px;
+    }
+    header .navigation-bar ul {
+        display: block;
+        padding-top: 40px;
+    }
+    header .navigation-bar ul li {
+        text-align: left;
+        padding: 14px 0;
+    }
+    footer .contact-container {
+        display: block;
+    }
+    footer .social-media {
+        margin-bottom: 40px;
+    }
+    .copyright ul {
+        display: block;
+        margin-top: -20px;
+    }
+    .copyright li {
+        margin-bottom: 5px;
+    }
+    .copyright li:not(:last-of-type):after {
+        content: '';
+    }
+
+}
+
+
+header nav {
+    position: fixed;
+    top: 0;
+    padding: 36px 36px 20px;
+    z-index: 20;
+}
+header nav .toggle {
+    display: none;
+    top: 26px;
+    left: 20px;
+    background-color: white;
+    border: none;
+    padding: 0;
+    z-index: 21;
+}
+header nav .toggle:focus {
+    outline: none;
+}
+header nav.active .toggle span {
+    background-color: #000;
+}
+header nav .toggle.active {
+    left: 32%;
+}
+header nav .toggle.active .first {
+    top: 16px;
+    transform: rotate(-45deg);
+}
+header nav .toggle.active .last {
+    top: 0;
+    transform: rotate(45deg);
+}
+header nav .toggle .hide {
+    transition: 0s;
+    visibility: hidden;
+}
+header nav .toggle span {
+    display: block;
+    background-color: black;
+    width: 30px;
+    height: 2px;
+    border-radius: 40px;
+}
+header nav .toggle span:not(:last-of-type) {
+    margin-bottom: 6px;
+}
+header nav .logo {
+    flex-basis: 56%;
+    padding-left: 50px;
+}
+header .navigation-bar.show {
+    width: 40%;
+}
+header .navigation-bar.show a {
+    color: black !important;
+}
+header .navigation-bar.show a:hover {
+    color: black !important;
+}
+header .navigation-bar ul li {
+    flex: 1;
+    padding: 0 10px;
+}
+header .navigation-bar a {
+    text-decoration: none;
+    transition: all .5s;
+    font-size: 16px;
+}
+header nav.active .navigation-bar a {
+    color: #000;
+}
+header .navigation-bar .underline {
+    height: 2px;
+    width: 0;
+    left: 50%;
+    bottom: -4px;
+    transition: all .3s;
+    display: block;
+}
+header .text {
+    top: 24%;
+}
+header .text h1 {
+    margin-bottom: 0;
+}
+header .text .arrow .left, header .text .arrow .right {
+    height: 3px;
+    width: 100px;
+}
+header .text .arrow .left {
+    left: -4%;
+}
+header .text .arrow .right {
+    right: -4%;
+}
+header .text .arrow .left:after, header .text .arrow .right:after {
+    content: '';
+    border: 10px solid transparent;
+    border-left-color: #fff;
+    top: -8px;
+}
+
 
 
 body {
-  background: #ffffff;
-  color: #333;
-  font-weight: normal;
-  font-size: 1em;
-  font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 12px;
+}
+body.hide-scroll::-webkit-scrollbar {
+    display: none;
+}
+a {
+    text-decoration: none;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
-input:focus, textarea:focus, keygen:focus, select:focus {
-  outline: none;
+img {
+    max-width: 100%;
 }
-::-moz-placeholder {
-  color: #666;
-  font-weight: 300;
-  opacity: 1;
+h2 {
+    font-family: 'Herr Von Muellerhoff', cursive;
+    font-size: 160px;
+    font-weight: normal;
+    margin-top: 5rem;
+    margin: 0 0 -45px;
 }
+h1, h3 {
+    font-family: "Source Code Pro", sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: purple;
+    letter-spacing: 9.4px;
+    margin: 0 0 15px;
+}
+p {
+    color: #515151;
+    line-height: 27px;
+}
+.a-CTA {
+    border-bottom: 2px solid purple;
+    padding-bottom: 4px;
+    letter-spacing: 1.5px;
+    font-size: 18px;
+}
+/*End Global*/
 
-::-webkit-input-placeholder {
-  color: #666;
-  font-weight: 300;
-}
+  
+  a{
+    text-decoration: none;
+  }
 
-/* contact from design */
-.container {
-  padding: 20px 50px 70px;
+/*Start Mutual*/
+p, .a-CTA, input, header .navigation-bar a, .copyright li, .contact .form form label, .contact .form form button {
+    font-family: Cabin, sans-serif;
 }
-.sec1title {
-  text-align: center;
+.fa-asterisk, .a-CTA, h2, header .navigation-bar a:hover, header nav.active .navigation-bar a:hover, footer .social-media .links a:hover, .copyright .info li a, .copyright .CTA li a:hover {
+    color: purple;
 }
-.sec1title h1 {
-      font-size: 40px;
-    margin: 25px;
-    text-transform: uppercase;
-    color: #16F1D4;
-    font-weight: 400;
+header nav .navigation-bar .underline, header .text .button button:hover, .contact .form form button:hover, .contact .text i:hover {
+    background-color: purple;
 }
-.section2 {
-  position: relative;
-  overflow: hidden;
+header .navigation-bar ul li, header .text, .about-us .text, .reservation .text, .menu .box-model, .menu .text, .fixed-image .text, footer, .copyright, .contact .text i {
+    text-align: center;
 }
-.section2 .contactform {
-    position: absolute;
-    top: 0;
-    right: 10%;
-    z-index: 99;
-    background: #393939;
-    padding: 30px 40px 70px;
-    box-sizing: border-box;
+header nav, header .navigation-bar ul, .about-us, .reservation, .about-us .image-container, .reservation .image-container, .menu, .menu .menu-image-container, footer .contact-container, .copyright ul, .contact {
+    display: flex;
 }
-.section2 .contactform input.form-fields,
-.section2 .contactform button.form-fields,
-.section2 .contactform textarea.form-fields {
-    padding: 0 0 0 40px;
-    display: block;
-    box-sizing: border-box;
-    width: 350px;
-    font-size: 16px;
-    background: #323232;
-    margin: 7px 0;
-    border: 1px solid #00C1A8;
-    color: #6BECDB;
-    opacity: 0.5;
-    min-height: 45px;
-    text-shadow: none;
+header nav .toggle, header nav .toggle span, header .navigation-bar, header .navigation-bar ul, .menu .box-model .close, footer .social-media .links a, .copyright .CTA li a {
+    transition: .3s;
+}
+header, header nav .toggle span, header .navigation-bar a, header .text, header .text .arrow .left, header .text .arrow .right, .recipes, .menu .box-image-container, .fixed-image .text, .copyright, .copyright .arrow-up {
     position: relative;
 }
-.section2 .contactform textarea.form-fields {
-  padding: 8px 40px;
-  resize: none;
-}
-.section2 .contactform button.form-fields.button {
-  color: #16F1D4;
-  font-size: 14px;
-  padding: 0;
-  text-transform: uppercase;
-
-}
-.section2 .contactform button.form-fields.button:hover {
-  background: #00C1A8;
-  color: #fff;
-  cursor: pointer;
-  opacity: 1;
-}
-
-.section2 .contactform button.form-fields.button i {
-  margin-left:10px;
-}
-
-.section2 .contactform h5 {
-  color: #16F1D4;
-    font-size: 16px;
-    margin-bottom: 15px;
-}
-.section2 .contactform label .cntfrmicn {
-  color: #00C1A8;
-    padding: 14px;
+header nav .toggle, header .navigation-bar .underline, header .text .arrow .left:after, header .text .arrow .right:after, header .svg-down, header .arrow-down, .recipes .text, .menu .box-model .close, .menu .box-model .arrow .arrow-right,.menu .box-model .arrow .arrow-left, .menu .box-image-container .box-image, .copyright .svg-up {
     position: absolute;
-    z-index: 99;
 }
-
-@media only screen and (max-width: 660px) {
-  .container {
-    padding: 10px 20px 30px;
-  }
-  .contmap {
-    height: 475px !important;
-  }
-  .sec1title h1 {
-    font-size: 28px;
-  }
-  .section2 .contactform { padding: 10px; right: 0; width: 100%; }
-  .section2 .contactform input.form-fields, .section2 .contactform button.form-fields, .section2 .contactform textarea.form-fields {
+.recipes .text, .fixed-image .text, .menu .box-image-container, .menu .box-image-container .box-image {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+header nav, header .navigation-bar a:hover .underline, header .navigation-bar li.active .underline, .menu .box-model, .menu .box-image-container, .menu .box-image-container .box-image {
     width: 100%;
-  }
 }
+button, .dots > div, header nav .toggle, header .arrow-down, .menu .box-model .close, .menu .box-model .arrow .arrow-right,.menu .box-model .arrow .arrow-left, .menu .menu-image-container .image img, footer .newsletter i, .copyright .arrow-up {
+    cursor: pointer;
+}
+.dots .active, header nav.active, header nav.active .toggle.active span, header nav .toggle span, header .navigation-bar .underline, header .text .arrow .left, header .text .arrow .right, header .text .button button, .contact form button {
+    background-color: #fff;
+}
+h1, h3, header .navigation-bar a, header .text span, .menu .box-model .close:hover, footer .text h2, footer .text p, footer .social-media .links a, .contact .text i, .contact .form form button {
+    color: #fff;
+}
+header nav, header .navigation-bar.show, header .navigation-bar a:hover .underline, header .navigation-bar li.active .underline, header .text .arrow .left:after, .menu .box-model, .copyright .arrow-up {
+    left: 0;
+}
+header .text .arrow .left:after, header .text .arrow .right:after, header .text span, footer .social-media .links a, footer .newsletter i, .copyright .arrow-up, .contact .text i, .contact .form form label {
+    display: inline-block;
+}
+/*End Mutual*/
+
+
+
+/*End Header*/
 </style>
 
-<body>
-    <div class="container">
-    <section class="section1">
-      <div class="sec1title">
-        <h1>Get in touch</h1>
-      </div>  
-    </section>
-    <section class="section2"> 
-      <div class="contactform">
-      <h5>Drop us a line...</h5>
-        <form action="#">
-          <label for="firstname">
-            <i class="cntfrmicn fa fa-user"></i>
-            <input name="firstname" class="form-fields" type="text">
-          </label>
-          <label for="email">
-            <i class="cntfrmicn fa fa-envelope"></i>
-            <input name="email" class="form-fields" type="text">
-          </label>
-          <label for="contact">
-            <i class="cntfrmicn fa fa-phone"></i>
-            <input name="contact" class="form-fields" type="text">
-          </label>
-          <label for="textarea">
-            <i class="cntfrmicn fa fa-comment"></i>
-            <textarea class="form-fields" name="textarea" id="" cols="30" rows="10"></textarea>
-          </label>
-          <button class="form-fields button" value="Send" type="submit">Send <i class="fa fa-paper-plane"></i></button>
-        </form>
-      </div>
-      <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script><div class="contmap" style='overflow:hidden;height:550px;width:100%;'><div id='gmap_canvas' style='height:100%;width:100%;'></div><div><small><a href="http://embedgooglemaps.com">                  embed google maps             </a></small></div><div><small><a href="http://freedirectorysubmissionsites.com/">free web directories</a></small></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div><script type='text/javascript'>function init_map(){var myOptions = {zoom:14,center:new google.maps.LatLng(19.075314480255834,72.88153973865361),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(19.075314480255834,72.88153973865361)});infowindow = new google.maps.InfoWindow({content:'<strong>My Location</strong><br>mumbai<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
-    </section>
-  </div>
-</body>
+<body class="stop-scroll">
+   <!--Start Header-->
+   <header>
+    <nav>
+        <div class="logo">
+            
+          <a href="index.html">
+          <h1 style="color: purple;" >EAT-INN <i style="color: purple;" class="fa fa-heart" aria-hidden="true"></i> </h1>
+          
+        </a>
+        </div>
+        <div class="toggle">
+            <span class="first"></span>
+            <span class="middle"></span>
+            <span class="last"></span>
+        </div>
+        <div class="navigation-bar">
+            <ul>
+                <li  class="active"><a style="font-size: 22px;" href="/pages/index.html">Home<span class="underline"></span></a></li>
+                <li><a style="font-size: 22px;" href="/pages/Gallery.html">Gallery<span class="underline"></span></a></li>
+                <li><a style="font-size: 22px;" href="/pages/Menue.html">Menu<span class="underline"></span></a></li>
+                <li><a style="font-size: 22px;" href="/pages/Reserve.html">Reservation<span class="underline"></span></a></li>
+                <li><a style="font-size: 22px;" href="/pages/Blog.html">Blog<span class="underline"></span></a></li>
+                <li><a style="font-size: 22px;" href="/pages/Contact.html">Contact<span class="underline"></span></a></li>
+                <li><a style="font-size: 22px;" href="/pages/About.html">About<span class="underline"></span></a></li>       
+                
+            </ul>
+            
+        </div>
+    </nav>
+   
+</header>
+<!--End Header-->
 
+
+
+
+
+
+
+<script>
+    // constants
+    const body = document.querySelector("body"),
+    loader = document.querySelector(".loader-wrap"),
+    links = document.querySelectorAll('a[href="#"]'),
+    nav = document.querySelector("header nav"),
+    navToggle = document.querySelector("header nav .toggle"),
+    navSpanMiddle = document.querySelector("header nav .toggle .middle"),
+    navNavigationBar = document.querySelector("header nav .navigation-bar"),
+    navNavigationBarLi = document.querySelectorAll(
+        "header nav .navigation-bar li"
+    ),
+    headerText = document.querySelector("header .text"),
+    headerSection = document.querySelector("header"),
+    aboutSection = document.querySelector(".about-us"),
+    recipeSection = document.querySelector(".recipes"),
+    menuSection = document.querySelector(".menu"),
+    fixedImageSection = document.querySelector(".fixed-image"),
+    footerSection = document.querySelector("footer"),
+    dotOne = document.querySelector(".dots .one"),
+    dotTwo = document.querySelector(".dots .two"),
+    dotThree = document.querySelector(".dots .three"),
+    dots = document.querySelectorAll(".dots > div"),
+    logoImage = document.querySelector("header nav .logo img"),
+    svgDown = document.querySelector("header .arrow-down"),
+    svgUp = document.querySelector(".copyright .arrow-up"),
+    menuImgs = document.querySelectorAll(".menu .menu-image-container img"),
+    boxModel = document.querySelector(".menu .box-model"),
+    menuImageContainer = document.querySelector(".menu-image-container"),
+    boxModelArrow = document.querySelector(".menu .box-model .arrow"),
+    boxModelImage = document.querySelector(".menu .box-model img"),
+    pageTitle = document.querySelector("title");
+
+// remove loader
+function fadeOutEffect() {
+    const fadeEffect = setInterval(function() {
+        if (!loader.style.opacity) {
+            loader.style.opacity = 1;
+        }
+        if (loader.style.opacity > 0) {
+            loader.style.opacity -= 0.4;
+        } else {
+            body.classList.remove('stop-scroll');
+            loader.classList.add('remove');
+            clearInterval(fadeEffect);
+        }
+    }, 100);
+}
+window.addEventListener("load", fadeOutEffect);
+
+// prevent links click hash
+links.forEach(link =>
+    link.addEventListener("click", function(e) {
+        e.preventDefault();
+    })
+);
+
+// toggle hamburger menu button
+navToggle.addEventListener("click", () => {
+    navToggle.classList.toggle("active");
+    navSpanMiddle.classList.toggle("hide");
+    navNavigationBar.classList.toggle("show");
+});
+
+// show active navigationbar li
+navNavigationBarLi.forEach(li =>
+    li.addEventListener("click", () => {
+        const arr = Array.from(li.parentElement.children);
+        arr.forEach(li => li.classList.remove("active"));
+        li.classList.add("active");
+    })
+);
+
+// svg-up smooth scroll
+svgUp.addEventListener("click", () => {
+    window.scroll({
+        top: 0,
+        behavior: "smooth"
+    });
+});
+
+window.onscroll = function() {
+    // make navbar fixed & change logo color
+    if (window.pageYOffset > headerSection.offsetHeight - 75) {
+        nav.classList.add("active");
+        logoImage.src = "https://res.cloudinary.com/abdel-rahman-ali/image/upload/v1535988525/logo-rosa.png";
+    } else {
+        nav.classList.remove("active");
+        logoImage.src = "https://res.cloudinary.com/abdel-rahman-ali/image/upload/v1535988515/logo-rosa-white.png";
+    }
+
+    // header welcome fade out and in
+    if (window.pageYOffset > 0) {
+        headerText.style.opacity = -window.pageYOffset / 300 + 1;
+    }
+    // home page JS
+    if (pageTitle.text === "ROSA- Restaurant") {
+        //change dots background color
+        if (window.pageYOffset < headerSection.offsetHeight * 0.5) {
+            dots.forEach(dot => dot.classList.remove("black"));
+            dotTwo.classList.remove("active");
+            dotOne.classList.add("active");
+        } else if (
+            window.pageYOffset > headerSection.offsetHeight * 0.5 &&
+            window.pageYOffset < recipeSection.offsetTop * 0.72
+        ) {
+            dots.forEach(dot => dot.classList.add("black"));
+        } else if (
+            window.pageYOffset > recipeSection.offsetTop * 0.75 &&
+            window.pageYOffset < menuSection.offsetTop * 0.81
+        ) {
+            dots.forEach(dot => dot.classList.remove("black"));
+            dotOne.classList.remove("active");
+            dotThree.classList.remove("active");
+            dotTwo.classList.add("active");
+        } else if (
+            window.pageYOffset > menuSection.offsetTop * 0.81 &&
+            window.pageYOffset < fixedImageSection.offsetTop * 0.86
+        ) {
+            dots.forEach(dot => dot.classList.add("black"));
+            dotThree.classList.remove("active");
+            dotTwo.classList.add("active");
+        } else if (
+            window.pageYOffset > fixedImageSection.offsetTop * 0.86 &&
+            window.pageYOffset < footerSection.offsetTop * 0.72
+        ) {
+            dots.forEach(dot => dot.classList.remove("black"));
+            dotTwo.classList.remove("active");
+            dotThree.classList.add("active");
+        } else if (
+            window.pageYOffset > footerSection.offsetTop * 0.72 &&
+            window.pageYOffset < footerSection.offsetTop * 0.901
+        ) {
+            dots.forEach(dot => dot.classList.add("black"));
+        } else if (window.pageYOffset > footerSection.offsetTop * 0.901) {
+            dots.forEach(dot => dot.classList.remove("black"));
+        }
+    }
+};
+
+// home page JS
+if (pageTitle.text === "ROSA- Restaurant") {
+    // svg-down smooth scroll
+    svgDown.addEventListener("click", () => {
+        window.scroll({
+            top: aboutSection.offsetTop - 30,
+            behavior: "smooth"
+        });
+    });
+
+    // dots smooth scroll
+    dots.forEach(dot =>
+        dot.addEventListener("click", function() {
+            window.scrollTo({
+                top: document.querySelector(this.dataset.x).offsetTop - 100,
+                behavior: "smooth"
+            });
+        })
+    );
+
+    // show box model
+    menuImgs.forEach(img =>
+        img.addEventListener("click", function() {
+            const arr = Array.from(this.parentElement.parentElement.children);
+
+            arr.forEach(div => div.classList.remove("active"));
+
+            this.parentElement.classList.add("active");
+            boxModel.classList.add("active");
+            boxModelImage.src = this.src;
+            boxModelImage.classList.add("active");
+            body.classList.add("hide-scroll");
+        })
+    );
+
+    // box model functions
+    function boxModelFun(e) {
+        // close box model
+        if (
+            e.code === "Escape" ||
+            (e.target.tagName === "DIV" && !e.target.classList.contains("arrow")) ||
+            e.target.classList.contains("close")
+        ) {
+            boxModel.classList.remove("active");
+            body.classList.remove("hide-scroll");
+        }
+
+        if (boxModel.classList.contains("active")) {
+            if (
+                e.code === "ArrowRight" ||
+                e.code === "ArrowLeft" ||
+                e.target.classList.contains("arrow-right") ||
+                e.target.classList.contains("arrow-left")
+            ) {
+                const arr = Array.from(menuImageContainer.children);
+                const active = arr.find(div => div.classList.contains("active"));
+
+                // change box model image
+                if (
+                    e.target.classList.contains("arrow-right") ||
+                    e.code === "ArrowRight"
+                ) {
+                    if (active.nextElementSibling === null) {
+                        active.parentElement.firstElementChild.classList.add("active");
+                        boxModelImage.src =
+                            active.parentElement.firstElementChild.firstElementChild.src;
+                    } else {
+                        active.nextElementSibling.classList.add("active");
+                        boxModelImage.src = active.nextElementSibling.firstElementChild.src;
+                    }
+                }
+
+                // change box model image
+                else if (
+                    e.target.classList.contains("arrow-left") ||
+                    e.code === "ArrowLeft"
+                ) {
+                    if (active.previousElementSibling === null) {
+                        active.parentElement.lastElementChild.classList.add("active");
+                        boxModelImage.src =
+                            active.parentElement.lastElementChild.lastElementChild.src;
+                    } else {
+                        active.previousElementSibling.classList.add("active");
+                        boxModelImage.src =
+                            active.previousElementSibling.firstElementChild.src;
+                    }
+                }
+                active.classList.remove("active");
+            }
+        }
+    }
+
+    window.addEventListener("keydown", boxModelFun);
+    window.addEventListener("click", boxModelFun);
+    boxModelArrow.addEventListener("click", boxModelFun);
+}
+ </script>
+
+
+
+
+</body>
 </html>
